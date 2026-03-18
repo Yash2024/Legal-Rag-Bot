@@ -53,7 +53,7 @@ legal-rag-bot/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd legal-rag-bot
 ```
 
@@ -95,7 +95,7 @@ pip install -r requirements.txt
 * Add your Groq API key:
 
 ```
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=groq_api_key_here
 ```
 
 * Make sure `.env` is listed in `.gitignore` (already configured)
@@ -123,10 +123,10 @@ This will:
 uvicorn app.main:app --reload
 ```
 
-Open API docs:
+Open API:
 
 ```
-http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/
 ```
 
 ---
