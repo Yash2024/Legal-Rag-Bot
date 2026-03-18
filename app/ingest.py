@@ -22,7 +22,9 @@ def load_all_pdfs(data_path):
 
 
 def ingest():
-    documents = load_all_pdfs("../data")
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(BASE_DIR, "data")
+    documents = load_all_pdfs(DATA_PATH)
 
     print(f"Loaded {len(documents)} pages")
 
@@ -40,7 +42,8 @@ def ingest():
     )
 
     db = FAISS.from_documents(chunks, embeddings)
-    db.save_local("../faiss_index")
+    FAISS_PATH = os.path.join(BASE_DIR, "faiss_index")
+    db.save_local(FAISS_PATH)
 
     print("✅ Ingestion complete!")
 

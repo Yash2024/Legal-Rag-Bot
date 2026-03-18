@@ -6,6 +6,7 @@ requests
 langchain
 langchain-community
 langchain-text-splitters
+langchain-huggingface
 
 faiss-cpu
 sentence-transformers
@@ -14,3 +15,4 @@ huggingface-hub
 pypdf
 
 groq
+python-dotenv

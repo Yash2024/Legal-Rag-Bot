@@ -89,13 +89,16 @@ pip install -r requirements.txt
 
 ---
 
-### 4. Add Legal Documents
+### 4. This project uses environment variables to securely manage API keys.
 
-Place your BNS PDF(s) inside:
+* Create a `.env` file in the root directory
+* Add your Groq API key:
 
 ```
-data/
+GROQ_API_KEY=your_api_key_here
 ```
+
+* Make sure `.env` is listed in `.gitignore` (already configured)
 
 ---
 
@@ -128,19 +131,21 @@ http://127.0.0.1:8000/docs
 
 ---
 
-### 7. Run UI (Optional)
+### 7. Run UI in separate terminal
 
 ```bash
+venv\Scripts\activate
 streamlit run ui.py
 ```
 
 ---
 
-## 🧪 Evaluation
+## 🧪 Evaluation (Run Test Cases)
 
 Run evaluation script:
 
 ```bash
+venv\Scripts\activate
 python eval.py
 ```
 
@@ -184,14 +189,6 @@ Features:
 * Not a substitute for professional legal advice
 
 ---
-
-## 🚧 Future Improvements
-
-* 📌 Add citations in responses
-* 🔄 Improve retrieval using reranking
-* 🧠 Use more advanced LLMs
-* 💬 Add chat history UI
-* 📈 Advanced evaluation metrics
 
 ---
 
